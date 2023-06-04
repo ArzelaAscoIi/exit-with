@@ -1,0 +1,21 @@
+name: exit with
+# branding:
+#   icon: "umbrella"
+#   color: "purple"
+description: >
+  Exits a github actions with a custom message and allows overwriting the `details` link.
+inputs:
+  GITHUB_TOKEN:
+    description: >
+      A GitHub token to access the current action run and modify the current check.
+      Set to `$ {{ github.token }}` (without the space between `$` and `{`).
+    required: true
+# outputs:
+#   MY_OUTPUT:
+#     description: >
+#       My output description
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
