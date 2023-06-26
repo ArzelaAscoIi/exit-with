@@ -25,7 +25,7 @@ classifiers = [
 ]
 dependencies = [
   "pytest-cov==4.0.0",
-  "pytest==7.3.1",
+  "pytest==7.4.0",
   "structlog==23.1.0",
   "httpx==0.24.1"
 ]
